@@ -1,0 +1,56 @@
+<header uk-sticky >
+    <nav class="uk-navbar-container uk-secondary uk-padding-small uk-padding-remove-vertical" search uk-navbar>
+    
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-button" uk-toggle="offcanvas">
+                <i class="uk-icon" uk-icon="icon:menu" ></i>
+            </a> <ul class="uk-visible@m uk-flex uk-navbar-nav ">
+                /°(()=>{
+
+                    const fs = require("fs");
+                    const path = `${process.molly.frontend}/csv`;
+
+                    return fs.readdirSync(path).map(x=>{ 
+                        const type = x.replace(/.csv$/i,'');
+                        if( type == 'porno' && req.query.type != 'porno' ) return '';
+                        return `<li> <a class="uk-button" href="?type=${type}"><span>${type}</span></a> </li>`;
+                    }).join('');
+
+                })()°/
+            </ul>
+        </div>
+        
+        <div class="uk-navbar-center">
+            <a class="uk-navbar-item uk-margin-remove uk-logo" href="/app?type=/°
+                (()=>{ 
+                    if( !req.query.type )
+                        return 'peliculas'
+                    return req.query.type 
+                })();
+            °/"> ArepaTV </a>
+        </div>
+        
+        <div class="uk-navbar-right">
+            <a class="uk-navbar-item uk-button" uk-toggle="target:[search]; animation:uk-animation-fade">
+                <i class="uk-icon" uk-icon="icon:search" ></i>
+            </a>
+        </div>
+    
+    </nav>
+    
+    <nav class="uk-navbar-container uk-secondary uk-padding-small uk-padding-remove-vertical" search uk-navbar hidden>
+        
+        <div class="uk-navbar-left uk-width-expand uk-child-width-expand">
+            <div class="uk-navbar-item uk-search uk-search-navbar">
+                <input class="uk-search-input" list="suggest-list" type="search" placeholder="Search" autofocus>
+            </div>
+        </div>
+    
+        <div class="uk-navbar-right">
+            <a class="uk-navbar-item uk-icon" uk-icon="icon:close" 
+               uk-toggle="target:[search]; animation:uk-animation-fade">
+            </a>
+        </div>
+    
+    </nav>
+</header>

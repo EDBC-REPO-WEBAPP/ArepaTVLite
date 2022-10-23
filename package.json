@@ -1,0 +1,18 @@
+{
+  "license": "MIT",
+  "name": "onlyplus",
+  "author": "bececrazy",
+  "engines": {
+    "node": "16"
+  },
+  "scripts": {
+    "start": "node main"
+  },
+  "description": "Ver Peliculas, Series, Documentales y Más",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "molly-db": "^1.0.23",
+    "molly-fetch": "^1.0.20",
+    "molly-js": "^1.0.82"
+  }
+}

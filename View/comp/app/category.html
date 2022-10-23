@@ -1,0 +1,34 @@
+<offcanvas uk-offcanvas="mode:reveal; overlay:true">
+    <div class="uk-offcanvas-bar">
+    	<button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul id="category" class="uk-list uk-list-divider" overflow-scroll>
+            /°(()=>{ 
+
+                const fs = require("fs");
+                const path = `${process.molly.frontend}/csv`;
+
+                return fs.readdirSync(path).map(x=>{ 
+                    const type = x.replace(/.csv$/i,'');
+                    if( type == 'porno' && req.query.type != 'porno' ) return '';
+                    return `<li> <a class="uk-button" href="?type=${type}">${type}</a> </li>`;
+                }).join('');
+
+            })()°/
+            <li></li> 
+            /°(()=>{
+                try{
+                    
+                    const fs = require('fs');
+
+                    const type = req.query.type || 'peliculas';
+                    const path = `${process.cwd()}/View/csv/${type}.csv`;
+                    
+                    return fs.readFileSync( path ).toString().split('|').map(x=>{
+                        return ` <li><a href="?type=${type}&filter=${x}">${x}</a></li> `;
+                    }).join('');
+
+                } catch(e) { return '' }
+            })()°/
+        </ul>
+    </div>
+</offcanvas>
